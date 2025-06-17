@@ -5,9 +5,9 @@
   <img src="https://img.shields.io/badge/Team-Robotics%20Club-blue" alt="Team: Robotics Club">
   <img src=https://img.shields.io/badge/Platform-PX4-blue) alt="Platform: PX4">
   <div align="center">
-    <img src="./photos/foto_1.png" width="600" alt="Project Image">
+    <img src="./photos/pixhawk.jpg" width="600" alt="Project Image">
     <br>
-    </h1>Add project specific image on ./photos/foto_1.png</h1> 
+   
   </div>
 </div>
 
