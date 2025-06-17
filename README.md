@@ -13,19 +13,25 @@
 
 ## 🤖 Project Overview
 
-This repository houses the codebase for the **!TODO(project name)**. It serves as a comprehensive collection of resources including code, CAD models, calculations, and component datasheets. Our aim is to create a well-documented reference that will enable future teams to build upon our work.
+The aim of this project is to simulate and create a pixhawk based delivery drone which can carry a parcel from one location to another, first manually using remote control, and then autonomously. A rigorous simulation on a model similar to the actual drone will be carried on Gazebo using the PX4 firmware, to test the drone's efficiency in every possible scenario and ensure that the drone, as well as the parcel, remain safe in most of the cases.
 
-### 🎯 Design Goals
-!ToDo
+### 🎯 Goals
 
-some sample
-- ✅ Compact design (within 100×100mm)
-- ✅ Efficient corner turning capability
-- ✅ Fast maze-solving algorithm
-- ✅ Differential drive with high-speed motors
+- ✅ Assemble and control the drone without GPS and telemetery
+- ✅ Simulate the default iris quadcoptor on Gazebo
+- ✅ Import a custom drone model in the PX4 environment
+- 🟡 Simulate the custom drone on gazebo
+- 🟡 Test the gripper in the simulation
+- 🟡 Modify basic parameters like thrust, mass, gravity etc. to account for all eventualities
+- 🟡 Add the gripper to the pixhawk quadcopter and fly the quadcopter with a payload (parcel)
+- 🟡 Automate the entire process
 
 
-## 🧠 Algorithm Development
+## Firmware Installation and Setup
+!ToDo()
+
+## Hardware Setup and Calibration
+
 !ToDo()
 
 ## ⏱️ Project Timeline
