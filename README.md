@@ -32,7 +32,54 @@ The aim of this project is to simulate and create a pixhawk based delivery drone
 
 ## Hardware Setup and Calibration
 
-!ToDo()
+The softwares needed to setup the hardware are :
+- Qground Control/Mission Planner as ground station (in our case it is Qground Control)
+- Ardupilot/PX4 firmware
+
+We follow [Qground control installation](https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html) for installation of ground station.
+
+Then we installed the PX4 firmware in pixhawk from firmware install section of Qground control.
+
+After which, we have to change the default parameters so that we can disable the telemetry and GPS:
+1. Disable GPS Usage and GPS Failsafe
+	-	Disable GPS Hardware Detection:
+	  -	Set `SYS_HAS_GPS` to `0` to indicate there is no GPS module.
+	-	Disable GPS Aiding in EKF:
+	  -	Set `EKF2_AID_MASK` to `3` (use only vision and barometer, no GPS).
+	-	Allow Arming Without GPS:
+	  -	Set `COM_ARM_WO_GPS` to `1` (allows arming without GPS).
+	-	Position Loss Failsafe:
+	  -	Set `COM_POSCTL_NAVL` to `0` (if using RC), so the drone switches to Altitude/Stabilized mode upon position loss, not failsafe.
+	-	Optional: For some setups, you may also need to set circuit breakers:
+	  -	`CBRK_GPSFAIL` to `240024` (disables GPS failsafe).
+2. Disable Telemetry
+	-	Disable MAVLink Telemetry Ports:
+	  -	Set `MAV_0_CONFIG`, `MAV_1_CONFIG`, and `MAV_2_CONFIG` to `Disabled` (prevents PX4 from expecting telemetry hardware).
+	-	Disable Data Link Loss Failsafe:
+	  -	Set `NAV_DLL_ACT` to `Disabled` (no action if telemetry link is lost).
+3. Disable Battery Failsafe
+	-	Disable Battery Level Failsafes:
+	  -	Set `COM_LOW_BAT_ACT` to `0` (no action on low battery).
+	  -	Set `BAT_LOW_THR`, `BAT_CRIT_THR`, and `BAT_EMERGEN_THR` to `0` (disables battery warning, failsafe, and emergency actions).
+  -	Disable Minimum Battery for Arming:
+	  -	Set `COM_ARM_BAT_MIN` to `0` (allows arming with any battery level).
+   
+Next, there is settings for mode(inside the flight mode section):
+- we set the mode to channel 5, such that
+  - when the position is up, its in stabilized mode.
+  - when the position is middle, its in Alt hold mode.
+  - when the position is low, its in the land mode.
+ 
+- Also we set the radio failsafe to land mode
+  - Set `NAV_RCL_ACT` to `2` (corresponds to land mode).
+ 
+And finally the calibrations (you will get the option on vehicle setup->left sidebar:
+1. Accelerometer calibration
+2. Gyroscope calibration
+3. Compass calibration
+4. Radio/RC calibration
+5. ESC calibration
+
 
 ## ⏱️ Project Timeline
 Main idea is to build a very very basic version first, probably within 2 weeks and then work on modifying it, (believer me doing otherwise is stupidity...)
