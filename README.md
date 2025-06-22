@@ -77,8 +77,9 @@ And finally the calibrations (you will get the option on vehicle setup->left sid
 1. Accelerometer calibration
 2. Gyroscope calibration
 3. Compass calibration
-4. Radio/RC calibration
-5. ESC calibration
+4. FOR ACCELEROMETER,GYROSCOPE,COMPASS : GO TO SENSORS WINDOW AND FOLLOW THE INSTRUCTIONS
+5. Radio/RC calibration : TURN ON THE RC ---> RADIO TAB
+6. ESC calibration : POWER TAB (CONNENCT TO USB , WAIT THEN CONNECT TO BATTERY AFTER THE PROMPT)
 
 
 ## ⏱️ Project Timeline
