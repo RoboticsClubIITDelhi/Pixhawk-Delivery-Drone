@@ -89,12 +89,12 @@ The software needed are :
 
 1. Installations
 - Gazebo Classic
-  sudo apt install aptitude
-  sudo apt install gazebo libgazebo11-dev
+- sudo apt install aptitude
+- sudo apt install gazebo libgazebo11-dev
 
 - PX4-Autopilot
-  git clone https://github.com/PX4/PX4-Autopilot.git --recursive
-  bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
+- `git clone https://github.com/PX4/PX4-Autopilot.git --recursive`
+- bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
 
   Restart the computer.
 
