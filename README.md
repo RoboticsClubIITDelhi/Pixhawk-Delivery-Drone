@@ -94,7 +94,7 @@ The software needed are :
 
 - PX4-Autopilot
 - `git clone https://github.com/PX4/PX4-Autopilot.git --recursive`
-  `bash ./PX4-Autopilot/Tools/setup/ubuntu.sh`
+- `bash ./PX4-Autopilot/Tools/setup/ubuntu.sh`
 
   Restart the computer.
 
