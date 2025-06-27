@@ -152,7 +152,7 @@ Main idea is to build a very very basic version first, probably within 2 weeks a
 - Yaw (spinning around the vertical axis) was observed as soon as the drone gets a throttle.
 -  possible reason was less current (low pwm) of diagonal motors.
 -  later confirmed by simulation into gazebo
--  similar spin was observed when the pwm of two diagonally placed motors was changed from 1100 to 100.
+-  similar spin was observed when the pwm of two diagonally placed motors was changed from 1100 to 100 in .sdf of the simulation model in gazebo.
 -  !TODO()
 
 ### Week 4: Algorithm Refinement
