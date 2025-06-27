@@ -81,9 +81,58 @@ And finally the calibrations (you will get the option on vehicle setup->left sid
 5. Radio/RC calibration : TURN ON THE RC ---> RADIO TAB
 6. ESC calibration : POWER TAB (CONNENCT TO USB , WAIT THEN CONNECT TO BATTERY AFTER THE PROMPT)
 
+## Simulations
 
+The software needed are :
+- Gazebo Classic
+- PX4-Autopilot
+
+1. Installations
+- Gazebo Classic
+  sudo apt install aptitude
+  sudo apt install gazebo libgazebo11-dev
+
+- PX4-Autopilot
+  git clone https://github.com/PX4/PX4-Autopilot.git --recursive
+  bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
+
+  Restart the computer.
+
+2. Running Simulations
+- go the px4 directory
+   cd PX4-Autopilot
+- terminal command for default model:
+   make px4_sitl gazebo-classic
+- terminal command for certain <custom> model:
+   make px4_sitl gazebo-classic_custom
+  
+3. File Structure
+- A custom model folder
+   Tools/simulation/gazebo-classic/sitl/models/custom_model
+
+- custom model should have
+  1. Meshes folder
+  2. custom_model.sdf
+  3. model.config
+
+- Meshes folder should have
+  1. custom_model.stl
+  2. propeller cw.dae
+  3. propeller ccw.dae
+
+REMARKS : 
+1. It is suggested to modify the default models rather than making everything from scratch.
+
+2. sdf files cannot be easily generated from some tools => modify the parameters in a default .sdf
+
+3. Or use a .jinja template just in case you need to make a .sdf
+4. moving parts must be stored as dae.
+5. .stl for the visuals
+6. .sdf for the data required for the simulations 
+
+   
 ## ⏱️ Project Timeline
-Main idea is to build a very very basic version first, probably within 2 weeks and then work on modifying it, (believer me doing otherwise is stupidity...)
+Main idea is to build a very very basic version first, probably within 2 weeks and then work on modifying it, (believe me doing otherwise is stupidity...)
 
 ### Week 1: Introduction
 - Review the competition rulebook
