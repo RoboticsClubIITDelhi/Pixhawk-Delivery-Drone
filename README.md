@@ -186,10 +186,43 @@ REMARKS :
 
 	8. Create your own python script
 	- `touch teleop_to_px4.py` (enter this command in src/teleop_px4/teleop_px4) folder
-	9. Download teleop_to_px4.py , package.xml , setup.py
- 	10. Replace the files in px4_ros2_ws/src/teleop_px4
-  	11. in the src directory `colcon build` in order to build the new teleop packages
 
+	9. Download teleop_to_px4.py , package.xml , setup.py
+     
+ 	10. Replace the files in px4_ros2_ws/src/teleop_px4
+      
+  	11. in the src directory `colcon build` in order to build the new teleop packages. All Done.
+
+
+4. Running and controlling simulations
+   - In terminal Run Gazebo Simulation as usual
+    - `cd PX4-Autopilot` `make px4_sitl gazebo-classic_iris`
+  
+   - In another terminal run the bridge
+    - `MicroXRCEAgent udp4 -p 8888` the bridge must start giving info including client Id and in terminal 1 , output would be like successfully created...
+  
+   - In another terminal run teleop_twist_keyboard
+    - Source the ros
+    - `source /opt/ros/humble/setup.bash`
+    - `source ~/install/setup.bash`
+    - `ros2 run teleop_twist_keyboard teleop_twist_keyboard`
+
+
+   - In yet another terminal
+    - source again like last step
+    - `ros2 run teleop_px4 teleop_to_px4`
+
+5. Bugs and solutions :
+   - Don't forget to source any terminal in which you want to run ros2 commands
+   - you can add source /opt/ros/humble/setup.bash in your bashrc if you dont want to source everytime.
+  
+   - you can control the drone in the terminal 3 , i.e. the terminal in which you opened the teleop_twist_keyboard
+  
+   - if the drone doesnt arms itself after few seconds : arm manually using `commander arm` in pxh shell in terminal 1
+   - if you cannot control the drone : try `commander mode offboard` in the pxh shell in terminal 1.
+  
+   - Bug : poll timeout => Restart the simulation :(
+   - if you want to start another simulation by killing one , redo step 4 (Running and controlling ...)
 
 
    
