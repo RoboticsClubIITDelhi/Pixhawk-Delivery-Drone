@@ -186,6 +186,9 @@ REMARKS :
 
 	8. Create your own python script
 	- `touch teleop_to_px4.py` (enter this command in src/teleop_px4/teleop_px4) folder
+	9. Download teleop_to_px4.py , package.xml , setup.py
+ 	10. Replace the files in px4_ros2_ws/src/teleop_px4
+  	11. in the src directory `colcon build` in order to build the new teleop packages
 
 
 
