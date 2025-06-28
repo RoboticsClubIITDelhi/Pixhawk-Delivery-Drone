@@ -132,7 +132,61 @@ REMARKS :
 
 ## ROS2 Humble and Teleop
 1. Installing ROS2 from ROS documentation of debian packages(recommended)
-   https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html
+ - [ROS2 Humble](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html)
+ - Test basic ros2 :
+ - `ros2 run demo_nodes_cpp talker`
+
+2. Clean insatllation of Micro XRCE-DDS agent (Creates a Bridge between PX4 and ROS2)
+   ## Install dependencies:
+   - `sudo apt update`
+   - `sudo apt install git cmake g++ libasio-dev libtinyxml2-dev`
+   ## Create a Workspace Director
+   - `mkdir -p ~/micrortps_ws && cd ~/micrortps_ws`
+   ## Cloning from github
+   - `git clone https://github.com/eProsima/Micro-XRCE-DDS-Agent.git`
+   - `cd Micro-XRCE-DDS-Agent`
+   - `git submodule update --init --recursive`
+   ## Build
+   - `cd ~/micrortps_ws/Micro-XRCE-DDS-Agent`
+   - `mkdir build && cd build cmake .. -DUAGENT_USE_SYSTEM_FASTDDS=OFF -DUAGENT_USE_SYSTEM_FASTCDR=OFF`
+   - `make -j$(nproc)`
+   - `sudo make install`
+   ## Update Library Cache
+   - `sudo ldconfig`
+   ## Run using udp port
+   - `MicroXRCEAgent udp4 -p 8888`
+
+3. Setting up our own teleop ros package
+       1. Install teleop keyboard
+       `sudo apt install ros-humble-teleop-twist-keyboard`
+
+	2. Create a working directory
+	`mkdir -p ~/px4_ros2_ws/src
+	cd ~/px4_ros2_ws/src`
+	
+	3. Install px4 msgs and ros com
+	`git clone https://github.com/PX4/px4_msgs.git
+	git clone https://github.com/PX4/px4_ros_com.git`
+	
+	4. Install dependencies
+	`sudo apt update
+	rosdep update
+	rosdep install --from-paths src --ignore-src -r -y`
+	
+	5. Build workspace
+	`cd ~/px4_ros2_ws
+	colcon build`
+	
+	6. Source the setup
+	`source install/setup.bash`
+	
+	7. Now create your custom teleop folder
+	`cd ~/px4_ros2_ws/src
+	ros2 pkg create teleop_px4 --build-type ament_python --dependencies rclpy geometry_msgs px4_msgs`
+
+
+   
+   
 
 
 
