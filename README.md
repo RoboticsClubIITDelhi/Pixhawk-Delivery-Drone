@@ -132,12 +132,12 @@ REMARKS :
 
 ## ROS2 Humble and Teleop
 1. Installing ROS2
-- `locale`
-- `sudo apt update && sudo apt install locales`
-- `sudo locale-gen en_US en_US.UTF-8`
-- `sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8`
-- `export LANG=en_US.UTF-8`
-- `locale`
+ `locale`
+ `sudo apt update && sudo apt install locales`
+ `sudo locale-gen en_US en_US.UTF-8`
+ `sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8`
+ `export LANG=en_US.UTF-8`
+ `locale`
 
 
 
