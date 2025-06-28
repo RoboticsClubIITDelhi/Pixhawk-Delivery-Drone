@@ -161,28 +161,28 @@ REMARKS :
        `sudo apt install ros-humble-teleop-twist-keyboard`
 
 	2. Create a working directory
-	`mkdir -p ~/px4_ros2_ws/src
-	cd ~/px4_ros2_ws/src`
+	`mkdir -p ~/px4_ros2_ws/src`
+	`cd ~/px4_ros2_ws/src`
 	
 	3. Install px4 msgs and ros com
-	`git clone https://github.com/PX4/px4_msgs.git
-	git clone https://github.com/PX4/px4_ros_com.git`
+	`git clone https://github.com/PX4/px4_msgs.git`
+	`git clone https://github.com/PX4/px4_ros_com.git`
 	
 	4. Install dependencies
-	`sudo apt update
-	rosdep update
-	rosdep install --from-paths src --ignore-src -r -y`
+	`sudo apt update`
+	`rosdep update`
+	`rosdep install --from-paths src --ignore-src -r -y`
 	
 	5. Build workspace
-	`cd ~/px4_ros2_ws
-	colcon build`
+	`cd ~/px4_ros2_ws`
+	`colcon build`
 	
 	6. Source the setup
 	`source install/setup.bash`
 	
 	7. Now create your custom teleop folder
-	`cd ~/px4_ros2_ws/src
-	ros2 pkg create teleop_px4 --build-type ament_python --dependencies rclpy geometry_msgs px4_msgs`
+	`cd ~/px4_ros2_ws/src`
+	`ros2 pkg create teleop_px4 --build-type ament_python --dependencies rclpy geometry_msgs px4_msgs`
 
 
    
