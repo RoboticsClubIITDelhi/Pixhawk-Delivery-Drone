@@ -184,6 +184,10 @@ REMARKS :
 	`cd ~/px4_ros2_ws/src`
 	`ros2 pkg create teleop_px4 --build-type ament_python --dependencies rclpy geometry_msgs px4_msgs`
 
+	8. Create your own python script
+	- `touch teleop_to_px4.py` (enter this command in src/teleop_px4/teleop_px4) folder
+
+
 
    
    
