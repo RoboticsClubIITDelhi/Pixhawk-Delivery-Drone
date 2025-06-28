@@ -128,7 +128,18 @@ REMARKS :
 3. Or use a .jinja template just in case you need to make a .sdf
 4. moving parts must be stored as dae.
 5. .stl for the visuals
-6. .sdf for the data required for the simulations 
+6. .sdf for the data required for the simulations
+
+## ROS2 Humble and Teleop
+1. Installing ROS2
+ - `locale`
+
+`sudo apt update && sudo apt install locales
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+export LANG=en_US.UTF-8`
+
+`locale`
 
    
 ## ⏱️ Project Timeline
