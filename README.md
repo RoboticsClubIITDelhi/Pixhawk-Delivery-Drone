@@ -140,7 +140,7 @@ REMARKS :
    ## Install dependencies:
    - `sudo apt update`
    - `sudo apt install git cmake g++ libasio-dev libtinyxml2-dev`
-   ## Create a Workspace Director
+   ## Create a Workspace Directory
    - `mkdir -p ~/micrortps_ws && cd ~/micrortps_ws`
    ## Cloning from github
    - `git clone https://github.com/eProsima/Micro-XRCE-DDS-Agent.git`
