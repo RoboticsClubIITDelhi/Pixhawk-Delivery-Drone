@@ -224,7 +224,22 @@ REMARKS :
    - Bug : poll timeout => Restart the simulation :(
    - if you want to start another simulation by killing one , redo step 4 (Running and controlling ...)
 
+# Simulating Gripper
+- By now you should be able to control the main body of the drone easily.
+1. Including the Gripper model in the drone body
+   - combine the main body of the drone with the immobile parts of the gripper
+   - for simplicity keep as less moving part as you can
+     
+2. File Structue
+   - Your files should have .dae files for the moving parts say claw in meshes folder
+   - .stl of your gripper + drone
 
+3. .sdf Changes
+   - Add the links and joints for the gripper (probably ask a senior how to do it)
+
+4. ROS2
+   - we will be using ros2 topic , where we will publish the commands and gazebo as a subscriber
+     
    
    
 
