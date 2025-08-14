@@ -20,7 +20,7 @@ The aim of this project is to simulate and create a pixhawk based delivery drone
 - ✅ Assemble and control the drone without GPS and telemetery
 - ✅ Simulate the default iris quadcoptor on Gazebo
 - ✅ Import a custom drone model in the PX4 environment
-- 🟡 Simulate the custom drone on gazebo
+- ✅ Simulate the custom drone on gazebo
 - 🟡 Test the gripper in the simulation
 - 🟡 Modify basic parameters like thrust, mass, gravity etc. to account for all eventualities
 - 🟡 Add the gripper to the pixhawk quadcopter and fly the quadcopter with a payload (parcel)
