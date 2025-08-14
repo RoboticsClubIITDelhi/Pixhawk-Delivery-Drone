@@ -7,12 +7,12 @@
 </div>
 
 ## 🔧 Hardware Specifications
-
-- **Dimensions**: !TODO()
+- **Frame**: DJI-F330
+- **Dimensions**: ---
 - **Drive System**: Differential drive 
 - **Sensors**:
   - !TODO()
-- **Power**: 3.7V LiPo battery
+- **Power**: 3.7V*3 LiPo battery
 
 ### Adding New CAD Files
 
@@ -26,7 +26,7 @@ When adding new design files, please follow these guidelines:
 !TODO()
 
 ### Base Configuration
-- **Microcontroller**: !TODO()
+- **Microcontroller**: Pixhawk 2.4.8 32bit STM32F427 Cortex M4 core with FPU.
 - **Motor Driver**: !TODO()
 - **Sensor Interface**: !TODO()
 
