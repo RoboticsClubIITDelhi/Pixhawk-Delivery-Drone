@@ -261,6 +261,8 @@ Main idea is to build a very very basic version first, probably within 2 weeks a
 
 ### Week 2: Hardware Assembly
 -  Assemble mechanical components
+-  There is a limit to screw the BLDC motors in the drone , don't exceed that . Results in coil damage - hence motor being dead.
+-  Make sure to power pixhawk using the pixhawk 2.8 power module/ step down converter. Don't power through ESCs -- they don't provide stable 5V required the flight controller.
 -  !TODO()
 
 ### Week 3: Debugging
@@ -280,8 +282,11 @@ Main idea is to build a very very basic version first, probably within 2 weeks a
 - !TODO()
 
 ## 📚 Resources
+### Additional readings
+- ESCs
+- Stepdown Power Module - (preferably adjustable)
 
-### Tools and References (tbd)
+### Tools and References
 - !TODO()
 
 ### Development Software
