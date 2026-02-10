@@ -175,16 +175,18 @@ REMARKS :
 	
 	5. Build workspace
 	`cd ~/px4_ros2_ws`
+	`sudo apt install ros-humble-ament-lint-common`
+
 	`colcon build`
 	
-	6. Source the setup
+	7. Source the setup
 	`source install/setup.bash`
 	
-	7. Now create your custom teleop folder
+	8. Now create your custom teleop folder
 	`cd ~/px4_ros2_ws/src`
 	`ros2 pkg create teleop_px4 --build-type ament_python --dependencies rclpy geometry_msgs px4_msgs`
 
-	8. Create your own python script
+	9. Create your own python script
 	- `touch teleop_to_px4.py` (enter this command in src/teleop_px4/teleop_px4) folder
 
 	9. Download teleop_to_px4.py , package.xml , setup.py
