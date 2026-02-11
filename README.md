@@ -171,7 +171,7 @@ REMARKS :
 	4. Install dependencies
 	`sudo apt update`
 	`rosdep update`
-	`rosdep install --from-paths src --ignore-src -r -y`
+	`rosdep install --from-paths src --ignore-src -r -y` (run this command after changing directory to ~/px4_ros2_ws)
 	
 	5. Build workspace
 	`cd ~/px4_ros2_ws`
